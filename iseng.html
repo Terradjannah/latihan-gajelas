@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p> GABUTTTT </P>
+
+  <script>
+
+  		alert("selamat datang di Terradjannah Cinema")
+  		alert("ada 1 pertanyaan yang harus anda jawab")
+  		var okey = true;
+  		var cancel = false;
+
+  		while(okey === true){
+  			var tanya1 =prompt("buah yang disukai \n (pilihan: apel, melon, semangka, jeruk)")
+        switch(tanya1){
+          case "apel":
+          case "melon":
+          case "semangka":
+          case "jeruk":
+            alert("buah yang kamu suka adalah " + tanya1);
+            alert("bener kannn niihhh ga boong?");
+            okey = confirm("gw gayakin sama lu, ulang lagi yakkk ");
+            break;
+          default:
+            okey = confirm("kok ga dijawab?, ulang lagi ya :)")
+            break;
+        }
+  		}
+
+  		while(cancel === false){
+  			alert("ga asik lu, malah di cancel huh")
+  			alert("try again")
+  			var tanya1 =prompt("buah yang disukai \n (pilihan: apel, melon, semangka, jeruk)")
+        switch(tanya1){
+          case "apel":
+          case "melon":
+          case "semangka":
+          case "jeruk":
+            alert("ga boong lagi kan, buah yang lu suka " + tanya1)
+            alert("suwer nih?")
+            cancel= confirm("boong mulu lu mah kesel gw, gw ulang lagi yak? ")
+            break;
+          default:
+            tanya1 = confirm("Ulang")
+            break;
+        }
+        }
+
+  		alert("yah malah di pencet OK, wkwkwk")
+  		alert("yaudah makasih yaa, buah yang kamu suka adalah " + tanya1)
+  		alert("silahkan menikmati filmnya, uyeyeye :) :p :p")
+    </script>
+  </body>
+</html>

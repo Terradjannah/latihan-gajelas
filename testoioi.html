@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>  OIII  </P>
+    <script>
+      var w = ""
+      for(a = 0; a < 5; a++){
+        for(b = 0; b <= a; b++){
+          w += "*"
+        }
+        w += "\n"
+      }
+      console.log(w)
+
+      var r =""
+      for(q = 1; q <= 5; q++){
+        for(e = 1; e <= 5; e++){
+          if(q % 2 == 0){
+            r += "* "
+          } else{
+            r += " *"          }
+        }
+        r += "\n"
+      }
+      console.log(r)
+
+
+    var siap='';
+    for(var i = 1; i<=4; i++){
+      for(var j = 5; j>=1; j--){
+        if(j>i){
+          siap += ' ';
+        }else{
+          siap += '1 '
+        }
+      }
+      siap += "\n"
+    }
+
+    for (var i = 1; i <=5; i++){
+     for (var j = 1; j <= 5; j++){
+      if (i>j) {
+        siap+=' ';
+      }else{
+        siap+='* ';
+      }
+    }
+    siap+='\n';
+   }
+   console.log(siap);
+
+   var adi = "";
+   for(var aw = 1; aw <= 10; aw++){
+     for(var wa = 1; wa <= 10; wa++){
+       if(aw < wa){
+         adi += " "
+       } else{
+         adi += "p"
+       }
+     }
+     adi += "\n"
+   }
+   for(var aw = 1; aw <= 10; aw++){
+     for(var wa = 9; wa >= 1 ; wa--){
+       if(wa >= aw){
+         adi += "p"
+       } else{
+         adi += " "
+       }
+     }
+     adi += "\n"
+   }
+   console.log(adi);
+
+   //mainan
+   //menangkap pilihan player
+   var uy = true
+   while (uy === true){
+     var player = prompt("pilih!  \ngajah; semut; orang")
+
+     //menangkapa pilihan computer
+     //membangkitkan nilai random
+     var comp = Math.random();
+
+     if(comp <= 0.34){
+       comp = "gajah"
+     }else if (comp > 0.34 && comp <= 0.67) {
+       comp = "semut"
+     }else{
+       comp = "orang"
+     }
+
+     //menentukan rules
+     var hasil =""
+
+     if(player == comp){
+       hasil = "SERI CUYYY"
+     }else if (player == "gajah") {
+       hasil = (comp == "orang") ? "WIDIH BISA MENANG LU" : "KALAH WOE SUKURIN";
+     }else if (player == "orang") {
+       hasil = (comp == "semut") ? "HORE MENANG !" : "JELAS SUDAH KAU KALAH"
+     }else if (player == "semut"){
+       hasil = (comp == "gajah") ? "MENANG CUYY!" : "OW OW OW KALAH "
+     } else {
+       hasil = "gaada " + player + " BEGO"
+     }
+
+     //tampilkan hasil
+     alert("kamu milih : " + player + " || computer milih : " + comp + "\nhasilnya : " + hasil)
+     uy = confirm("lagi gak?")
+ }
+ alert("Yaudah, thanks ya udah nyoba game pertama :)")
+
+    
+    </script>
+  </body>
+</html>
+
+      var t = ""
+      for(var p = 1; p <= 5; p++){
+        switch (p) {
+          case 1 :
+            t += "    *    "
+            break;
+          case 2 :
+            t += "   * *   "
+            break;
+          case 3 :
+            t += "  * * *  "
+            break;
+          case 4:
+            t += " * * * * "
+            break;
+          case 5:
+            t += "* * * * *"
+            break;
+          default:
+            alert("masa gitu")
+            break;
+        }
+        t += '\n'
+      }
+      for(var p = 4; p >= 1; p--){
+        switch (p) {
+          case 1 :
+            t += "    *    "
+            break;
+          case 2 :
+            t += "   * *   "
+            break;
+          case 3 :
+            t += "  * * *  "
+            break;
+          case 4:
+            t += " * * * * "
+            break;
+          case 5:
+            t += "* * * * *"
+            break;
+          default:
+            alert("masa gitu")
+            break;
+        }
+        t += '\n'
+      }
+      console.log(t)
