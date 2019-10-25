@@ -5,7 +5,15 @@
     <title></title>
   </head>
   <body>
-    <<script type="text/javascript">
+    <form name="form">
+      <input type="text" name="soal1" placeholder="masukan sisi kubus 1">
+      <input type="text" name="soal2" placeholder="masukan sisi kubus 2">
+      <input type="button" value="Click" onclick="Volume_kubus()">
+      <div id="1"></div>
+      <div id="2"></div>
+      <div id="3"></div>
+
+      <script type="text/javascript">
       function tambahan (a , b, c){
 
         var tambah = a + b * c;
@@ -15,6 +23,30 @@
 
       alert("pertama \n" + tambahan (2,4,5))
       alert("kedua \n" + tambahan (22,40,10))
+
+      function Volume_kubus(a,b){
+        return a * a * a + b * b * b
+      }
+
+      document.getElementById("1").innerHTML = Volume_kubus (9,8);
+
+      function okey(){
+        var hasil = 0
+        for(var i=0; i < arguments.length ; i++){
+          hasil += arguments[i]
+        }
+        return hasil;
+      }
+      console.log(okey(8,9,7,6,4,9,2,4))
+
+      function faktorial(q){
+        if (q === 0){
+          return 1;
+        }
+        return q *= faktorial(q-1);
+      }
+      document.getElementById("3").innerHTML = faktorial(5)
+
     </script>
   </body>
 </html>
