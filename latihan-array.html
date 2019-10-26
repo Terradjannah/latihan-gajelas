@@ -1,1 +1,44 @@
-git
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="1"></div>
+    <div id="2"></div>
+    <div id="3"></div>
+    <div id="4"></div>
+    <div id="5"></div>
+
+    <script type="text/javascript">
+    var arr = [1,2,3,4,5,80,30,6,7,8,9,10,15,20,90]
+    var ar2 = ["adi", 'toyo']
+    var aneh = arr.sort(function (a,b){
+      return a-b;
+    })
+
+
+    document.getElementById('1').innerHTML = aneh.join(" || ");
+
+    var toyo = ['hai','cui','oi','puy']
+    var toyo2 = toyo.slice(0,3);
+
+    document.getElementById('2').innerHTML = toyo.join(" ~ ")
+    document.getElementById('3').innerHTML = toyo2.join(" ~ ")
+
+    var wewe = [435, 1, 3455,87623, "kim", "youjin", "wilsonn", "laura"]
+    var wawa = wewe.map(function (a){
+      return a
+    })
+    document.getElementById('4').innerHTML = wawa.join(' (||) ')
+
+    var wewq = [435, 1, 3455,87623, "kim", "youjin", "wilsonn", "laura"]
+    var q = wewq.filter(function(x){
+      return x = 5;
+    })
+    console.log(q)
+
+    </script>
+  </body>
+</html>
