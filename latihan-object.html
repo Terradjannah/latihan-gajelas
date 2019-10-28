@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    // membuat object dengan cara literal
+    var dataDiri = {
+      nama : "adi",
+      umur : "20",
+      alamat : {
+        jalan : "mahoi 3, RT/RW 03/02, no 1",
+        kab : "tangerang selatan",
+        provinsi : "banten",
+      }
+    }
+
+    //membuat object dengan cara function
+    function buatObjectMahasiswa (nama, nrp, umur){
+      var mhs3 = {};
+      mhs3.nama = nama;
+      mhs3.nrp  = nrp;
+      mhs3.umur = umur;
+      return mhs3;
+    }
+
+    var mhs4 = buatObjectMahasiswa ("adi", "903", "90");
+
+    //membuat object dengan construction
+    function Mahasiswa (nama, nrp, umur){
+      this.nama = nama;
+      this.nrp  = nrp;
+      this.umur = umur;
+    }
+
+    var mhs5 = new Mahasiswa ("adi", "839", "50")
+    </script>
+  </body>
+</html>
