@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dom Selection</title>
+  <style>
+    * {
+        border: 2px solid #dedede;
+        padding: 15px;
+        margin: 15px;
+    }
+    html {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      max-width: 600px;
+      margin: 30px auto;
+      font-family: sans-serif;
+      color: #333;
+    }
+    #b p {
+      color : red;
+    }
+    li:nth-child(2) {color :blue;}
+  </style>
+</head>
+<body>
 
-  </body>
+  <h1 id="judul">Hello World</h1>
+  <div id="container">
+      <section id="a">
+          <p class="p1">paragraf 1</p>
+          <a href="http://instagram.com/sandhikagalih">Instagram Sandhika Galih</a>
+          <p class="p2">paragraf 2</p>
+          <p class="p3">paragraf 3</p>
+      </section>
+      <section id="b">
+          <p>paragraf 4</p>
+          <ul>
+              <li>item 1</li>
+              <li>item 2</li>
+              <li>item 3</li>
+          </ul>
+      </section>
+  </div>
+
+<script>
+  const judul = document.getElementById('judul');
+  judul.style.backgroundColor = 'grey';
+  judul.style.color = 'purple';
+  judul.innerHTML = 'Adi febriana';
+
+  const l = document.getElementsByTagName('li');
+  for(let i = 0; i < l.length; i++){
+    l[i].style.backgroundColor = 'pink';
+  }
+
+  const p1 = document.getElementsByClassName('p1');
+
+  const li3 = document.querySelector('section#b ul li:nth-child(3)');
+  li3.style.backgroundColor = "orange";
+
+  const p = document.querySelectorAll('p');
+  for(let w = 0; w < p.length; w++){
+  p[w].style.backgroundColor = "lightblue";
+  }
+
+  
+</script>
+</body>
 </html>
