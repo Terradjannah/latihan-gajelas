@@ -23,6 +23,8 @@
       color : red;
     }
     li:nth-child(2) {color :blue;}
+
+    .biru-muda {background-color: lightgreen}
   </style>
 </head>
 <body>
@@ -47,7 +49,7 @@
 
 <script>
   const judul = document.getElementById('judul');
-  judul.style.backgroundColor = 'grey';
+  judul.style.backgroundColor = 'lightblue';
   judul.style.color = 'purple';
   judul.innerHTML = 'Adi febriana';
 
@@ -66,7 +68,41 @@
   p[w].style.backgroundColor = "lightblue";
   }
 
-  
+  const a = document.querySelector('section#a .p2');
+
+  //manipulasi node
+  const elementar = document.createElement('p');
+  const textar = document.createTextNode('hai guys ini paragraf 4');
+  elementar.appendChild(textar);
+  const seksia = document.getElementById('a');
+  seksia.appendChild(elementar);
+
+  const elementar1 = document.createElement('li');
+  const textar2 = document.createTextNode('item 1.5');
+  elementar1.appendChild(textar2);
+  const list1 = document.querySelector('section#b ul');
+  const bawah = document.getElementsByTagName('li')[1];
+  list1.insertBefore(elementar1, bawah)
+
+  const elementar2 =document.createElement('li',);
+  const textar3 = document.createTextNode('hay guys ketemu lagi ini untuk menggantikan item1');
+  const bawah1 = document.getElementsByTagName('li')[3];
+  const bawah2 = document.getElementsByTagName('li')[0];
+  const elementar3 = document.getElementsByTagName('li')[1];
+  elementar2.appendChild(textar3);
+  list1.removeChild(bawah1)
+  list1.replaceChild(elementar2, bawah2 )
+  elementar3.setAttribute('href','http://youtube.com')
+
+  //events
+  const p4 = document.querySelector('section#b p');
+  p4.addEventListener('click', function(){
+    const elementar4 = document.createElement('li');
+    const textar4 = document.createTextNode('tambahan');
+    elementar4.appendChild(textar4);
+    const seksiul = document.querySelector('section#b ul');
+    seksiul.appendChild(elementar4);
+  });
 </script>
 </body>
 </html>
